@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles/styles_main.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="./assets/logo-alura.png">
+    </header>
+
+    <main>
+        <section class="segmento__para__traduccion">
+            
+            <textarea type="string" id="mensajeDeUsuario" class="elemento__entrada" placeholder="Ingresa tus secretos AQUÍ" cols="30" rows="10"></textarea>
+            
+            <div class="advertencia__de__uso">
+                <img src="./assets/warning.png">
+                <p>Sólo letras minúsculas y sin acentos</p>
+            </div>
+            
+            <div class="botones__para__traduccion">
+                <button onclick="encriptarMensaje();" class="boton" id="generador">Encriptar</button>
+                <button onclick="traducirMensaje();" class="boton" id="regenerador">Desencriptar</button>
+            </div>
+
+        </section>
+        
+        <section class="texto__traducido" id="presentacionDeTraduccion">
+              <textarea type="string" id="mensajeTransformado" class="elemento__salida" placeholder="Nada por aquí, nada por acá" cols="20" rows="10"></textarea>
+            <div>
+                <button onclick="copiarTexto();" class="boton" id="copiarPortapapeles">Copiar</button>
+            </div>
+    
+        </section>
+
+    </main>
+
+    <footer class="pie__de__pagina">
+        <p>Desarrollado por Victor Perez (@mx-data-rookie)</p>
+    </footer>
+    
+    <script src="traductor.js" defer></script>
+
+    <script>
+        window.onload = function() {
+            var textareaTop = document.getElementById('mensajeDeUsuario');
+            textareaTop.value = '';
+            var textareaBottom = document.getElementById('mensajeTransformado');
+            textareaBottom.value = '';
+        };
+    </script>
+
+</body>
+
+</html>

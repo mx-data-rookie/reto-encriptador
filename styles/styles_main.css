@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root{
+    --color-primario:#059212;
+    --color-secundario:#06D001;
+    --color-terciario:#9BEC00;
+    --color-cuaternario:#F3FF90;
+
+    --fuente-primaria: "Inter", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-cuaternario);
+    box-sizing: border-box;
+}
+
+.encabezado{
+    padding: 3% 0% 0% 5%;
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    gap: 21px;
+
+}
+
+.elemento__entrada{
+    background-color: transparent;
+    border: none;
+    resize: none;
+    margin-top: 5%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 2rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    color: var(--color-primario);
+    
+}
+
+.elemento__entrada::placeholder{
+    font-size: 2rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    color: var(--color-primario);
+    opacity: 1;
+}
+
+.elemento__entrada:focus {
+    outline: none;
+}
+
+.elemento__salida{
+    background-color: white;
+    border: none;
+    resize: none;
+    background-image: url('../assets/logo-region-trad.png');
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+    padding-top: 3%;
+    padding-left: 3%;
+    border-radius: 24px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    color: var(--color-primario);
+}
+
+.elemento__salida::placeholder{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    color: var(--color-secundario);
+    opacity: 1;
+
+}
+
+.elemento__salida:focus {
+    outline: none;
+}
+
+.botones__para__traduccion{
+    display: flex;
+    margin-top: 18px;
+    gap: 24px;
+}
+
+.boton{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--color-primario);
+    width: 328px;
+    height: 24px;
+    padding: 24px 0px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+}
+
+.boton#generador{
+    background-color: var(--color-primario);
+    color: var(--color-cuaternario);
+}
+
+.boton#regenerador{
+    background-color: var(--color-cuaternario);
+    color: var(--color-primario);
+}
+
+.boton#copiarPortapapeles{
+    margin-top: 18px;
+    margin-left: 58px;
+    position: absolute;
+    background-color: white;
+    color: var(--color-primario); 
+}
+
+.advertencia__de__uso{
+    display: flex;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-family: var(--fuente-primaria);
+    font-weight: 400;
+    color: black;
+}
+
+.pie__de__pagina{
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-primaria);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1079px){
+    main{
+        flex-direction: column;
+        padding: 5%;
+        margin-left: 0%;
+        width: auto;
+    }
+
+    .elemento__salida{
+        width: 100%;
+    }
+
+    .texto__traducido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .boton#copiarPortapapeles{
+        margin-left: 0;
+        position: static;
+    }
+}
+
+@media (max-width: 759px){
+    .botones__para__traduccion{    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
